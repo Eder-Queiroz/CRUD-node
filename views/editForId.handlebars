@@ -1,0 +1,30 @@
+<main>
+    <form action="/User/edit/{{user.id}}" method="post" class="form-popup" id="form-cadastro">
+            <h1>Editar</h1>
+            
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" value="{{user.name}}">
+            
+                <label for="email-cadastro">Email:</label>
+                <input type="email" name="email" id="email-cadastro" value="{{user.email}}">
+            
+                <div class="container">
+                    <div class="wrapper">
+                        <label for="cep">CEP:</label>
+                        <input type="text" name="cep" id="cep" value="{{user.cep}}">
+                    </div>
+                
+                    <div class="wrapper">
+                        <label for="endereco">Enderaço:</label>
+                        <input type="text" name="endereco" id="endereco" value="{{user.endereco}}">
+                    </div>
+                </div>
+            
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" id="cpf" value="{{user.cpf}}">
+            
+                <label for="cell">Telefone:</label>
+                <input type="number" name="cell" id="cell" value="{{user.cell}}">
+            <input type="submit" value="editar" id="editar">
+        </form>
+</main>

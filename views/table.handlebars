@@ -1,0 +1,33 @@
+<section class="users">
+
+    <div>
+        <input type="text" placeholder="Buscar" name="search" id="search" class="search">
+        <span><i class="fa-solid fa-search"></i></span>
+    </div>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>options</th>
+        </tr>
+
+        {{#each users}}
+
+            <tr class="user">
+                <th class="name">{{this.name}}</th>
+                <th>
+                    <a href="/User/view/{{this.id}}"><i class="fa-solid fa-eye"></i></a>
+                    <a href="/User/edit/{{this.id}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <form action="/User/delete/{{this.id}}" method="post">
+                        <button type="submit"><i class="fa-solid fa-delete-left"></i></button>
+                    </form>
+                </th>
+            </tr>
+
+        {{/each}}
+
+    </table>
+
+</section>
+
+<script src="js/search.js"></script>

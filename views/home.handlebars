@@ -1,0 +1,59 @@
+<main>
+    <form action="/User/Login" method="post" class="form-login" id="form-login">
+        <h1>Login</h1>
+        <span class="hide" id="invalid-info" style="color: red; font-style: italic;">email/senha invalido!</span>
+        <div class="container">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="email@example.com">
+        </div>
+        <div class="container">
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <input type="submit" value="Entrar" id="btn-login">
+    </form>
+
+    <button class="cadastrar" id="btn-cadastrar">Cadastrar</button>
+</main>
+
+<div class="popUp hide" id="popUp">
+    <div class="container-form">
+        <div class="wrapper-button">
+            <button class="close" id="close">X</button>
+        </div>
+        <form action="/User/Cadastro" method="post" class="form-popup" id="form-cadastro">
+            <h1>Cadastro</h1>
+            
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+            
+                <label for="email-cadastro">Email:</label>
+                <input type="email" name="email" id="email-cadastro" placeholder="email@example.com">
+            
+                <label for="password-cadastro">Senha:</label>
+                <input type="password" name="password" id="password-cadastro">
+            
+                <div class="container">
+                    <div class="wrapper">
+                        <label for="cep">CEP:</label>
+                        <input type="text" name="cep" id="cep">
+                    </div>
+                
+                    <div class="wrapper">
+                        <label for="endereco">Enderaço:</label>
+                        <input type="text" name="endereco" id="endereco">
+                    </div>
+                </div>
+            
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" id="cpf">
+            
+                <label for="cell">Telefone:</label>
+                <input type="number" name="cell" id="cell">
+            <input type="submit" value="Cadastrar" id="cadastrar">
+        </form>
+    </div>
+</div>
+
+<script src="js/cadastro.js"></script>
+<script src="js/login.js"></script>
